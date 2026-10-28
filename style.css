@@ -1,0 +1,127 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: url(./images/bg-image.svg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.logo {
+    width: 140px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 10px #c48fc3;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-top: 1rem;
+    margin-left: 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.more a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.download-btn {
+    background: #e7a5e5;
+    padding: 12px;
+    border-radius: 60px;
+    border-top-right-radius: 0%;
+    color: #ffffff;
+}
+
+.content {
+    margin-top: 3rem;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: move-up 0.5s linear forwards;
+    flex-direction: row;
+}
+
+
+
+@keyframes move-up {
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.hippies {
+    width: 400px;
+    border-radius: 30%;
+    position: relative;
+    left: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: move-up 0.5s linear forwards;
+    animation-delay: 0.5s;
+}
+
+.join-btn {
+    padding: 0.6rem;
+    border-radius: 50px;
+    position: relative;
+    left: 0%;
+    right: 50%;
+    font-weight: 600;
+    margin-top: 1rem;
+    border: none;
+    background: #d335ce;
+    color: #ffffff;
+    font-family: inherit;
+    border-top-left-radius: 0%;
+    width: 8rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgb(82, 10, 51);
+    transition: 0.6s all ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: move-up 0.5s linear forwards;
+    animation-delay: 0.8s;
+}
+
+button:hover {
+    color: rgb(0, 9, 17);
+    background: #e384e0;
+    border-top-right-radius: 30px;
+}
